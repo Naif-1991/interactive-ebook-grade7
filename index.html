@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - English Book</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="login-container">
+    <h2 id="login-title">Enter Your Name</h2>
+    <input type="text" id="username" placeholder="Your Name" />
+    <button onclick="login()">Enter</button>
+  </div>
+
+  <script>
+    function login() {
+      const name = document.getElementById('username').value;
+      if (name.trim() !== '') {
+        localStorage.setItem('userName', name);
+        window.location.href = "book.html";
+      }
+    }
+  </script>
+</body>
+</html>

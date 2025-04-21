@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Interactive Book</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="header">
+    <h1 id="greeting"></h1>
+    <div class="lang-switch">
+      <button onclick="setLang('en')">English</button>
+      <button onclick="setLang('ar')">العربية</button>
+    </div>
+  </div>
+
+  <div class="content">
+    <h2 data-i18n="unit1_title">Unit 1: Reading</h2>
+    <div class="lesson" id="lesson-container">
+      <!-- lesson content loaded via JS -->
+    </div>
+
+    <audio controls>
+      <source src="audio/lesson1.mp3" type="audio/mp3">
+      Your browser does not support the audio tag.
+    </audio>
+
+    <button onclick="loadQuiz()">Take Quiz</button>
+    <div id="quiz-container"></div>
+    <a href="survey.html" class="button">Give Feedback</a>
+    <a href="video/tutorial.mp4" class="button" target="_blank">Watch Tutorial</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
